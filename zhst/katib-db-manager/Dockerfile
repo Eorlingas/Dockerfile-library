@@ -1,2 +1,2 @@
-FROM gcr.io/kubeflow-images-public/katib/v1alpha3/katib-db-manager:917164a
+FROM gcr.io/kubeflow-images-public/katib/v1alpha3/katib-db-manager:v0.8.0
 MAINTAINER flq<filiqiang@smartvision.cn>

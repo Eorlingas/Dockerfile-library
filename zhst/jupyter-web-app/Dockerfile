@@ -1,2 +1,2 @@
-FROM gcr.io/kubeflow-images-public/jupyter-web-app:vmaster-gd9be4b9e
+FROM gcr.io/kubeflow-images-public/jupyter-web-app:v1.0.0-g2bd63238
 MAINTAINER flq<filiqiang@smartvision.cn>
