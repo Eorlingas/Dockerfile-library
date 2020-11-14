@@ -30,13 +30,13 @@ ENV PATH=/var/miniconda/bin:$PATH
 ENV CONDA_AUTO_UPDATE_CONDA=false
 
 # Create a Python 3.6 environment
-RUN /var/miniconda/bin/conda create -y --name py36 python=3.6.9 \
- && /var/miniconda/bin/conda clean -ya
+RUN conda create -y --name py36 python=3.6.9 \
+ && conda clean -ya
 ENV CONDA_DEFAULT_ENV=py36
 ENV CONDA_PREFIX=/var/miniconda/envs/$CONDA_DEFAULT_ENV
 ENV PATH=$CONDA_PREFIX/bin:$PATH
-RUN /var/miniconda/bin/conda install conda-build=3.18.9=py36_3 \
- && /var/miniconda/bin/conda clean -ya
+RUN conda install conda-build=3.18.9=py36_3 \
+ && conda clean -ya
 
 # CUDA 9.2-specific steps
 RUN conda install -y pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch \
